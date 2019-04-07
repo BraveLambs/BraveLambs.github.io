@@ -74,7 +74,7 @@
     version: '7.1.0',
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
     back2top: true,
-    back2top_sidebar: false,
+    back2top_sidebar: true,
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -107,7 +107,7 @@
 <meta property="og:image" content="https://img-blog.csdn.net/20151223173340012">
 <meta property="og:image" content="https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=cb895f01ed1190ef01fb95d9f620fa2b/4bed2e738bd4b31cc9bd1b578dd6277f9f2ff85d.jpg">
 <meta property="og:image" content="https://lintcode-media.s3.amazonaws.com/problem/rainwatertrap.png">
-<meta property="og:updated_time" content="2019-04-06T14:27:06.548Z">
+<meta property="og:updated_time" content="2019-04-07T04:12:13.140Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="北邮机试模板">
 <meta name="twitter:description" content="​    这是我在准备北邮上机考试时准备的模板，其中不少是来自北邮的历年机试真题，还有一部分来自PAT书。但是北邮网研今年不能携带纸质资料了，但还好今年题目简单。 ​    北邮机试有它自己的特点，一般前两道题比较简单，一般就是简单的数学问题，进制问题，简单的字符串问题， 质数问题，打印图案等等。前两道题是比较容易轻松拿下的。后两道题有时候就会比较难的，树，图，搜索，并查集，贪心，DP，还有很恶心">
@@ -248,11 +248,40 @@
 
       
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
     </ul>
   
 
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -266,6 +295,13 @@
     </header>
 
     
+  
+  
+
+  
+
+  <a href="https://github.com/Bravelambs" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
 
 
     <main id="main" class="main">
@@ -354,7 +390,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-06 22:27:06" itemprop="dateModified" datetime="2019-04-06T22:27:06+08:00">2019-04-06</time>
+                <time title="修改时间：2019-04-07 12:12:13" itemprop="dateModified" datetime="2019-04-07T12:12:13+08:00">2019-04-07</time>
               
             
           </span>
@@ -552,25 +588,26 @@
 <p>把所有的元素排序，找第k个，这样的复杂度是O（n*logn）</p>
 <p>而题目的挑战是O(k*logn)。</p>
 <p>我们使用最小堆（优先队列）来实现，每次把元素的右边和下边的元素入队（比当前元素大一点点）。其实入队的操作就是在调整最小堆。【最小堆的实现使用数组vector】</p>
-<h2 id="模板九-DP"><a href="#模板九-DP" class="headerlink" title="模板九 DP"></a>模板九 DP</h2><h5 id="一、最长连续子序列"><a href="#一、最长连续子序列" class="headerlink" title="一、最长连续子序列"></a>一、最长连续子序列</h5><p>求数组 A[0], A[1] …A[n-1] 的最大连续子序列和。</p>
+<h2 id="模板九-DP"><a href="#模板九-DP" class="headerlink" title="模板九 DP"></a>模板九 DP</h2><h3 id="一、最长连续子序列"><a href="#一、最长连续子序列" class="headerlink" title="一、最长连续子序列"></a>一、最长连续子序列</h3><p>求数组 A[0], A[1] …A[n-1] 的最大连续子序列和。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* dp[0] = A[0];</span></span><br><span class="line"><span class="comment">对于下标1...n的元素，以其为结尾的序列最大和为 前 i-1 个元素的最大和在加上自身， 自身的比较</span></span><br><span class="line"><span class="comment">即如果 前i-1 个元素和大于0 则此元素附在前 i-1 个序列之后， 否则 自己单开一个序列。*/</span></span><br><span class="line"></span><br><span class="line">dp[<span class="number">0</span>] = A[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">for</span>( <span class="keyword">int</span> i =<span class="number">1</span>; i &lt; n<span class="number">-1</span>; i++ )</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span>( dp[i<span class="number">-1</span>] &gt; <span class="number">0</span> )</span><br><span class="line">		dp[i] = dp[i<span class="number">-1</span>] + A[i];</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		dp[i] = A[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="二、最长连续不下降子序列-LIS"><a href="#二、最长连续不下降子序列-LIS" class="headerlink" title="二、最长连续不下降子序列( LIS )"></a>二、最长连续不下降子序列( LIS )</h5><p>求数组 A[1], A[2] …A[n] 的非递减子序列的最大长度( 可以不连续 )。</p>
+<h3 id="二、最长连续不下降子序列-LIS"><a href="#二、最长连续不下降子序列-LIS" class="headerlink" title="二、最长连续不下降子序列( LIS )"></a>二、最长连续不下降子序列( LIS )</h3><p>求数组 A[1], A[2] …A[n] 的非递减子序列的最大长度( 可以不连续 )。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*先让每个元素自成一个子序列 长度为1</span></span><br><span class="line"><span class="comment">i 从 1 到 n 依次计算 以A[i]结尾的LIS</span></span><br><span class="line"><span class="comment">计算的方法是 枚举从 1 到 i的元素 A[j] 判断A[i]接在A[j]后面能够更大 更新A[i] */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> ans = <span class="number">-1</span>;</span><br><span class="line"><span class="keyword">for</span>( <span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++ )&#123;</span><br><span class="line">    dp[i] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>( <span class="keyword">int</span> j = <span class="number">1</span>; j &lt; i; j++ )</span><br><span class="line">        <span class="keyword">if</span>( A[i] &gt;= A[j] &amp;&amp; dp[j]+<span class="number">1</span> &gt; dp[i] )</span><br><span class="line">            dp[i] = dp[j]+<span class="number">1</span>;</span><br><span class="line">    ans = max( dp[i], ans );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="三、最长公共子序列"><a href="#三、最长公共子序列" class="headerlink" title="三、最长公共子序列"></a>三、最长公共子序列</h5><h5 id="四、最大回文串"><a href="#四、最大回文串" class="headerlink" title="四、最大回文串"></a>四、最大回文串</h5><h5 id="五、背包"><a href="#五、背包" class="headerlink" title="五、背包"></a>五、背包</h5><p>一、Leetcode—221.Maximal Square</p>
+<h3 id="三、最长公共子序列"><a href="#三、最长公共子序列" class="headerlink" title="三、最长公共子序列"></a>三、最长公共子序列</h3><h3 id="四、最大回文串"><a href="#四、最大回文串" class="headerlink" title="四、最大回文串"></a>四、最大回文串</h3><h3 id="五、背包"><a href="#五、背包" class="headerlink" title="五、背包"></a>五、背包</h3><p>一、Leetcode—221.Maximal Square</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*以矩阵中每一个点作为正方形右下角点来处理，</span></span><br><span class="line"><span class="comment">当该点为1时，以该点为右下角点的最大边长最多比以它的左方、上方和左上方为右下角的正方形边长多1，</span></span><br><span class="line"><span class="comment">即如果该点左上的三个点有值为0的点，当前点所在的全为1的正方形最大边长只能为1，</span></span><br><span class="line"><span class="comment">所以这时只能取另外三个正方形中最小的正方形边长+1。</span></span><br><span class="line"><span class="comment">用d[i][j]表示以i，j坐标为右下角的正方形最大边。</span></span><br><span class="line"><span class="comment">则有状态转移方程：dp[i][j] = min(dp[i-1][j-1], min(dp[i-1][j], dp[i][j-1])) + 1*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> ( i=<span class="number">0</span>; i&lt;n; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (matrix[i][<span class="number">0</span>] == <span class="number">1</span>) &#123;</span><br><span class="line">    dp[i][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    res = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> ( j=<span class="number">0</span>; j&lt;n; j++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (matrix[<span class="number">0</span>][j] == <span class="number">1</span>) &#123;</span><br><span class="line">        dp[<span class="number">0</span>][j] = <span class="number">1</span>;</span><br><span class="line">        res = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> ( i=<span class="number">1</span>; i&lt;n; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> ( j=<span class="number">1</span>; j&lt;n; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (matrix[i][j] == <span class="number">1</span>) &#123;</span><br><span class="line">            dp[i][j] = min(dp[i<span class="number">-1</span>][j<span class="number">-1</span>], min(dp[i<span class="number">-1</span>][j], dp[i][j<span class="number">-1</span>])) + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        res = max(res, dp[i][j]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="模板十-STL"><a href="#模板十-STL" class="headerlink" title="模板十 STL"></a>模板十 STL</h2><h5 id="一、vector"><a href="#一、vector" class="headerlink" title="一、vector"></a>一、vector</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义一维数组</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; num;</span><br><span class="line"><span class="comment">//定义另一个领接表</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; G[N];</span><br><span class="line">push_back(x);</span><br><span class="line">pop_back();		<span class="comment">//删除尾部元素</span></span><br><span class="line">size();			<span class="comment">//求元素个数</span></span><br><span class="line">insert(it,x)	<span class="comment">//迭代器it处插入x</span></span><br><span class="line">erase(it)</span><br><span class="line">erase(first, last)	<span class="comment">//左闭右开</span></span><br><span class="line"></span><br><span class="line">sort( v.begin(), v,end() )		<span class="comment">//排序 默认从小到大排序</span></span><br><span class="line">sort( v.begin(), v.end(), greater&lt;<span class="keyword">int</span>&gt;() )	<span class="comment">//从大到小排序</span></span><br></pre></td></tr></table></figure>
-<h5 id="二、string"><a href="#二、string" class="headerlink" title="二、string"></a>二、string</h5><h5 id="三、set"><a href="#三、set" class="headerlink" title="三、set"></a>三、set</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义一个set</span></span><br><span class="line"><span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">insert(x);			<span class="comment">//插入一个元素 自动递增驱虫排序</span></span><br><span class="line">find(value);  		<span class="comment">//返回值为value的迭代器类型</span></span><br><span class="line">erase(it);			<span class="comment">//删除迭代器元素</span></span><br><span class="line">erase(value);		<span class="comment">//删除指定值元素</span></span><br><span class="line">erase( first, last ) <span class="comment">//删除迭代器类型指定区间元素 左开右闭</span></span><br><span class="line">size(); 			<span class="comment">//获取元素个数</span></span><br></pre></td></tr></table></figure>
-<h5 id="四、queue"><a href="#四、queue" class="headerlink" title="四、queue"></a>四、queue</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义一个队列</span></span><br><span class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; q;</span><br><span class="line">push();		<span class="comment">//入队</span></span><br><span class="line">front();	<span class="comment">//队首元素</span></span><br><span class="line">back();		<span class="comment">//队尾元素</span></span><br><span class="line">pop();		<span class="comment">//队首元素出队</span></span><br><span class="line">empty();	<span class="comment">//判空</span></span><br><span class="line">size();		<span class="comment">//队列元素个数</span></span><br></pre></td></tr></table></figure>
+<h2 id="模板十-STL"><a href="#模板十-STL" class="headerlink" title="模板十 STL"></a>模板十 STL</h2><h3 id="一、vector"><a href="#一、vector" class="headerlink" title="一、vector"></a>一、vector</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义一维数组</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; num;</span><br><span class="line"><span class="comment">//定义另一个领接表</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; G[N];</span><br><span class="line">push_back(x);</span><br><span class="line">pop_back();		<span class="comment">//删除尾部元素</span></span><br><span class="line">size();			<span class="comment">//求元素个数</span></span><br><span class="line">insert(it,x)	<span class="comment">//迭代器it处插入x</span></span><br><span class="line">erase(it)</span><br><span class="line">erase(first, last)	<span class="comment">//左闭右开</span></span><br><span class="line"></span><br><span class="line">sort( v.begin(), v,end() )		<span class="comment">//排序 默认从小到大排序</span></span><br><span class="line">sort( v.begin(), v.end(), greater&lt;<span class="keyword">int</span>&gt;() )	<span class="comment">//从大到小排序</span></span><br></pre></td></tr></table></figure>
+<h3 id="二、string"><a href="#二、string" class="headerlink" title="二、string"></a>二、string</h3><h3 id="三、set"><a href="#三、set" class="headerlink" title="三、set"></a>三、set</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义一个set</span></span><br><span class="line"><span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">insert(x);			<span class="comment">//插入一个元素 自动递增驱虫排序</span></span><br><span class="line">find(value);  		<span class="comment">//返回值为value的迭代器类型</span></span><br><span class="line">erase(it);			<span class="comment">//删除迭代器元素</span></span><br><span class="line">erase(value);		<span class="comment">//删除指定值元素</span></span><br><span class="line">erase( first, last ) <span class="comment">//删除迭代器类型指定区间元素 左开右闭</span></span><br><span class="line">size(); 			<span class="comment">//获取元素个数</span></span><br></pre></td></tr></table></figure>
+<h3 id="四、queue"><a href="#四、queue" class="headerlink" title="四、queue"></a>四、queue</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义一个队列</span></span><br><span class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; q;</span><br><span class="line">push();		<span class="comment">//入队</span></span><br><span class="line">front();	<span class="comment">//队首元素</span></span><br><span class="line">back();		<span class="comment">//队尾元素</span></span><br><span class="line">pop();		<span class="comment">//队首元素出队</span></span><br><span class="line">empty();	<span class="comment">//判空</span></span><br><span class="line">size();		<span class="comment">//队列元素个数</span></span><br></pre></td></tr></table></figure>
 <p>优先队列</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义优先队列</span></span><br><span class="line">priority_queue&lt;<span class="keyword">int</span>&gt; q;</span><br><span class="line"><span class="comment">// 数字大的优先级大 数字大的在队首</span></span><br><span class="line">priority_queue&lt;<span class="keyword">int</span>, &lt;<span class="built_in">vector</span>&gt;, less&lt;<span class="keyword">int</span>&gt; &gt; q;</span><br><span class="line"><span class="comment">// 数字大的优先级大 数字小的在队首</span></span><br><span class="line">priority_queue&lt;<span class="keyword">int</span>, &lt;<span class="built_in">vector</span>&gt;, greater&lt;<span class="keyword">int</span>&gt; &gt; q;</span><br><span class="line"></span><br><span class="line"><span class="comment">//结构体优先级设置</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">fruit</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> num;</span><br><span class="line">    <span class="keyword">friend</span> <span class="keyword">bool</span> <span class="keyword">operator</span> &lt; ( fruit a, fruit b )</span><br><span class="line">        <span class="keyword">return</span> a.num &lt; b.num;	<span class="comment">//数字大的优先级大 数字大的在队首</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="五、algorithm"><a href="#五、algorithm" class="headerlink" title="五、algorithm"></a>五、algorithm</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">max() min() <span class="built_in">abs</span>()</span><br><span class="line">swap()</span><br><span class="line">reverse( it1, it2 ) 		<span class="comment">//左闭右开</span></span><br><span class="line">reverse( A, A+A.size() )	<span class="comment">//数组逆置</span></span><br></pre></td></tr></table></figure>
-<h2 id="模板十一-其它算法"><a href="#模板十一-其它算法" class="headerlink" title="模板十一 其它算法"></a>模板十一 其它算法</h2><h5 id="一、递归"><a href="#一、递归" class="headerlink" title="一、递归"></a>一、递归</h5><p>1、从数组中取出n个元素的所有组合</p>
+<h3 id="五、algorithm"><a href="#五、algorithm" class="headerlink" title="五、algorithm"></a>五、algorithm</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">max() min() <span class="built_in">abs</span>()</span><br><span class="line">swap()</span><br><span class="line">reverse( it1, it2 ) 		<span class="comment">//左闭右开</span></span><br><span class="line">reverse( A, A+A.size() )	<span class="comment">//数组逆置</span></span><br></pre></td></tr></table></figure>
+<h2 id="模板十一-其它算法"><a href="#模板十一-其它算法" class="headerlink" title="模板十一 其它算法"></a>模板十一 其它算法</h2><h3 id="一、递归"><a href="#一、递归" class="headerlink" title="一、递归"></a>一、递归</h3><p>1、从数组中取出n个元素的所有组合</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//arr为原始数组</span></span><br><span class="line"><span class="comment">//start为遍历起始位置</span></span><br><span class="line"><span class="comment">//result保存结果，为一维数组</span></span><br><span class="line"><span class="comment">//count为result数组的索引值，起辅助作用</span></span><br><span class="line"><span class="comment">//NUM为要选取的元素个数</span></span><br><span class="line"><span class="comment">//arr_len为原始数组的长度，为定值</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">combine_increase</span><span class="params">(<span class="keyword">int</span>* arr, <span class="keyword">int</span> start, <span class="keyword">int</span>* result, <span class="keyword">int</span> count, <span class="keyword">const</span> <span class="keyword">int</span> NUM, <span class="keyword">const</span> <span class="keyword">int</span> arr_len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (i = start; i &lt; arr_len + <span class="number">1</span> - count; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        result[count - <span class="number">1</span>] = i;</span><br><span class="line">        <span class="keyword">if</span> (count - <span class="number">1</span> == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> j;</span><br><span class="line">            <span class="keyword">for</span> (j = NUM - <span class="number">1</span>; j &gt;= <span class="number">0</span>; j--)</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">"%d\t"</span>,arr[result[j]]);</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            combine_increase(arr, i + <span class="number">1</span>, result, count - <span class="number">1</span>, NUM, arr_len);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> arr[] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> num = <span class="number">4</span>;</span><br><span class="line">    <span class="keyword">int</span> result[num];</span><br><span class="line">    combine_increase(arr, <span class="number">0</span>, result, num, num, <span class="keyword">sizeof</span>(arr)/<span class="keyword">sizeof</span>(<span class="keyword">int</span>));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="二、回溯"><a href="#二、回溯" class="headerlink" title="二、回溯"></a>二、回溯</h5><p>1、求数组的全排列</p>
+<p>二、回溯</p>
+<p>1、求数组的全排列</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n, P[maxn], HashTable[maxn] = &#123;<span class="literal">false</span>&#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">generateP</span><span class="params">(<span class="keyword">int</span> index)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(index == n+<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; P[i];</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>( <span class="keyword">int</span> x = <span class="number">1</span>; x &lt;= n; x++ )</span><br><span class="line">        <span class="keyword">if</span>( HashTable[x] == <span class="literal">false</span> )</span><br><span class="line">        &#123;</span><br><span class="line">            P[index] = x;</span><br><span class="line">            HashTable[x] = <span class="literal">true</span>;</span><br><span class="line">            generateP( index+<span class="number">1</span> );</span><br><span class="line">            HashTable[x] = <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    n = <span class="number">3</span>;</span><br><span class="line">    generateP(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>2、八皇后问题</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*八皇后问题即使全排列问题, 找到不符合条件的全排列，即在同一条对角线的两个皇后</span></span><br><span class="line"><span class="comment">同一对角线的条件为*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>( <span class="built_in">abs</span>(i - j) == <span class="built_in">abs</span>( p[i]-p[j] ) )</span><br></pre></td></tr></table></figure>
-<h5 id="三、枚举"><a href="#三、枚举" class="headerlink" title="三、枚举"></a>三、枚举</h5><h5 id="四、其他问题"><a href="#四、其他问题" class="headerlink" title="四、其他问题"></a>四、其他问题</h5><p>1、查找第K小数</p>
+<h3 id="三、枚举"><a href="#三、枚举" class="headerlink" title="三、枚举"></a>三、枚举</h3><h3 id="四、其他问题"><a href="#四、其他问题" class="headerlink" title="四、其他问题"></a>四、其他问题</h3><p>1、查找第K小数</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*此题可以用快排的思想找第K小数，也可以直接使用set 可以去重复*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1000</span>;</span><br><span class="line"><span class="keyword">int</span> num[maxn];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	freopen( <span class="string">"in.txt"</span>, <span class="string">"r"</span>, <span class="built_in">stdin</span> );</span><br><span class="line">	<span class="keyword">int</span> n, k;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; k;</span><br><span class="line">	<span class="keyword">for</span>( <span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++ )</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; num[i];</span><br><span class="line">	k--;</span><br><span class="line">	<span class="keyword">int</span> pivot = num[<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">int</span> low = <span class="number">0</span>, high = n<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">while</span>( low &lt; high ) &#123;</span><br><span class="line">		<span class="keyword">int</span> low_temp = low;</span><br><span class="line">		<span class="keyword">int</span> high_temp = high;</span><br><span class="line">		pivot = num[low];</span><br><span class="line">		<span class="keyword">while</span>( low &lt; high ) &#123;</span><br><span class="line">			<span class="keyword">while</span>( num[high] &gt;= pivot &amp;&amp; low &lt; high )</span><br><span class="line">				high--;</span><br><span class="line">			num[low] = num[high];</span><br><span class="line">			<span class="keyword">while</span>( num[low] &lt;= pivot &amp;&amp; low &lt; high )</span><br><span class="line">				low++;</span><br><span class="line">			num[high] = num[low];</span><br><span class="line">		&#125;</span><br><span class="line">		num[low] = pivot;</span><br><span class="line">		<span class="keyword">if</span>( low &lt; k ) &#123;</span><br><span class="line">			low++;</span><br><span class="line">			high = high_temp;</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span>( low &gt; k ) &#123;</span><br><span class="line">			high--;</span><br><span class="line">			low = low_temp;</span><br><span class="line">		&#125; <span class="keyword">else</span></span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; num[low] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>​                </p>
 
@@ -602,6 +639,58 @@
       
 
       
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+              <div>
+                
+
+<script src="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.css">
+
+
+  
+
+
+<div class="likely">
+	
+ 	 	<div class="twitter">Tweet</div>
+	
+ 	 	<div class="facebook">Share</div>
+	
+ 	 	<div class="linkedin">Link</div>
+	
+ 	 	<div class="gplus">Plus</div>
+	
+ 	 	<div class="vkontakte">Share</div>
+	
+ 	 	<div class="odnoklassniki">Class</div>
+	
+ 	 	<div class="telegram">Send</div>
+	
+ 	 	<div class="whatsapp">Send</div>
+	
+ 	 	<div class="pinterest">Pin</div>
+	
+</div>
+
+              </div>
+            
+            
+            
+          </div>
+        
+        </div>
       
       
 
@@ -675,6 +764,8 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="Braveshine">
+            
               <p class="site-author-name" itemprop="name">Braveshine</p>
               <div class="site-description motion-element" itemprop="description"></div>
           </div>
@@ -739,7 +830,41 @@
           
 
           
+            <div class="chat motion-element">
+              
+              
+              <i class="fa fa-comment"></i>
+                  Chat
+                
+            </div>
+          
 
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/bravelambs" title="GitHub &rarr; https://github.com/bravelambs" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://weibo.com/5653438869" title="Weibo &rarr; https://weibo.com/5653438869" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+            </div>
           
 
           
@@ -766,7 +891,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#模板一-打印素数表"><span class="nav-number">1.</span> <span class="nav-text">模板一 打印素数表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板二-大数"><span class="nav-number">2.</span> <span class="nav-text">模板二 大数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板三-表达式求值"><span class="nav-number">3.</span> <span class="nav-text">模板三 表达式求值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板四-字符串"><span class="nav-number">4.</span> <span class="nav-text">模板四 字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板五-树模板"><span class="nav-number">5.</span> <span class="nav-text">模板五 树模板</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、树的存储"><span class="nav-number">5.1.</span> <span class="nav-text">一、树的存储</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、父亲孩子表示法"><span class="nav-number">5.1.1.</span> <span class="nav-text">一、父亲孩子表示法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、建树"><span class="nav-number">5.1.2.</span> <span class="nav-text">二、建树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四、二叉树的存储和求深度与层次遍历"><span class="nav-number">5.1.3.</span> <span class="nav-text">四、二叉树的存储和求深度与层次遍历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#五、二叉树的建立与删除"><span class="nav-number">5.1.4.</span> <span class="nav-text">五、二叉树的建立与删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#六、二叉树计算深度与层次遍历"><span class="nav-number">5.1.5.</span> <span class="nav-text">六、二叉树计算深度与层次遍历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#七、树的双亲表示法-并查集模板"><span class="nav-number">5.1.6.</span> <span class="nav-text">七、树的双亲表示法( 并查集模板)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、树的操作"><span class="nav-number">5.2.</span> <span class="nav-text">二、树的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、数的最大深度及其个数-普通树的孩子表示法"><span class="nav-number">5.2.1.</span> <span class="nav-text">1、数的最大深度及其个数(  普通树的孩子表示法  )</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、先序中序求后序"><span class="nav-number">5.2.2.</span> <span class="nav-text">2、先序中序求后序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、中序后序求先序"><span class="nav-number">5.2.3.</span> <span class="nav-text">3、中序后序求先序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、后序中序建树"><span class="nav-number">5.2.4.</span> <span class="nav-text">4、后序中序建树</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、二叉排序树"><span class="nav-number">5.3.</span> <span class="nav-text">三、二叉排序树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、给定数字-排成完全二叉排序树"><span class="nav-number">5.3.1.</span> <span class="nav-text">1、给定数字 排成完全二叉排序树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、给定树型-排成二叉排序树"><span class="nav-number">5.3.2.</span> <span class="nav-text">2、给定树型 排成二叉排序树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、按给定序列一次插入构建二叉排序树"><span class="nav-number">5.3.3.</span> <span class="nav-text">3、按给定序列一次插入构建二叉排序树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四、哈夫曼树"><span class="nav-number">5.3.4.</span> <span class="nav-text">四、哈夫曼树</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板六-图模板"><span class="nav-number">6.</span> <span class="nav-text">模板六 图模板</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、图的存储"><span class="nav-number">6.1.</span> <span class="nav-text">一、图的存储</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、弗洛伊德算法"><span class="nav-number">6.2.</span> <span class="nav-text">二、弗洛伊德算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、Dijkstra算法-堆优化"><span class="nav-number">6.3.</span> <span class="nav-text">三、Dijkstra算法(  堆优化 )</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、经过若干中间节点的最短路径"><span class="nav-number">6.4.</span> <span class="nav-text">四、经过若干中间节点的最短路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、多条最短路径最优算法（-PAT实战-P369-）"><span class="nav-number">6.5.</span> <span class="nav-text">五、多条最短路径最优算法（ PAT实战 P369 ）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六、无环图找根使树高最大"><span class="nav-number">6.6.</span> <span class="nav-text">六、无环图找根使树高最大</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#八、DFS同时遍历点集和边集-PAT实战-P350"><span class="nav-number">6.7.</span> <span class="nav-text">八、DFS同时遍历点集和边集( PAT实战 P350 )</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#九、边权最小-点权最大-PAT实战360"><span class="nav-number">6.8.</span> <span class="nav-text">九、边权最小 点权最大(  PAT实战360 )</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板七-搜索"><span class="nav-number">7.</span> <span class="nav-text">模板七 搜索</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、DFS求连通块"><span class="nav-number">7.1.</span> <span class="nav-text">一、DFS求连通块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、并查集-PAT-P334"><span class="nav-number">7.2.</span> <span class="nav-text">二、并查集(PAT P334)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板八-矩阵问题"><span class="nav-number">8.</span> <span class="nav-text">模板八 矩阵问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板九-DP"><span class="nav-number">9.</span> <span class="nav-text">模板九 DP</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#一、最长连续子序列"><span class="nav-number">9.0.0.1.</span> <span class="nav-text">一、最长连续子序列</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#二、最长连续不下降子序列-LIS"><span class="nav-number">9.0.0.2.</span> <span class="nav-text">二、最长连续不下降子序列( LIS )</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#三、最长公共子序列"><span class="nav-number">9.0.0.3.</span> <span class="nav-text">三、最长公共子序列</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#四、最大回文串"><span class="nav-number">9.0.0.4.</span> <span class="nav-text">四、最大回文串</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#五、背包"><span class="nav-number">9.0.0.5.</span> <span class="nav-text">五、背包</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#模板十-STL"><span class="nav-number">10.</span> <span class="nav-text">模板十 STL</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#一、vector"><span class="nav-number">10.0.0.1.</span> <span class="nav-text">一、vector</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#二、string"><span class="nav-number">10.0.0.2.</span> <span class="nav-text">二、string</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#三、set"><span class="nav-number">10.0.0.3.</span> <span class="nav-text">三、set</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#四、queue"><span class="nav-number">10.0.0.4.</span> <span class="nav-text">四、queue</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#五、algorithm"><span class="nav-number">10.0.0.5.</span> <span class="nav-text">五、algorithm</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板十一-其它算法"><span class="nav-number">11.</span> <span class="nav-text">模板十一 其它算法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#一、递归"><span class="nav-number">11.0.0.1.</span> <span class="nav-text">一、递归</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#二、回溯"><span class="nav-number">11.0.0.2.</span> <span class="nav-text">二、回溯</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#三、枚举"><span class="nav-number">11.0.0.3.</span> <span class="nav-text">三、枚举</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#四、其他问题"><span class="nav-number">11.0.0.4.</span> <span class="nav-text">四、其他问题</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#模板一-打印素数表"><span class="nav-number">1.</span> <span class="nav-text">模板一 打印素数表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板二-大数"><span class="nav-number">2.</span> <span class="nav-text">模板二 大数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板三-表达式求值"><span class="nav-number">3.</span> <span class="nav-text">模板三 表达式求值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板四-字符串"><span class="nav-number">4.</span> <span class="nav-text">模板四 字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板五-树模板"><span class="nav-number">5.</span> <span class="nav-text">模板五 树模板</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、树的存储"><span class="nav-number">5.1.</span> <span class="nav-text">一、树的存储</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、父亲孩子表示法"><span class="nav-number">5.1.1.</span> <span class="nav-text">一、父亲孩子表示法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、建树"><span class="nav-number">5.1.2.</span> <span class="nav-text">二、建树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四、二叉树的存储和求深度与层次遍历"><span class="nav-number">5.1.3.</span> <span class="nav-text">四、二叉树的存储和求深度与层次遍历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#五、二叉树的建立与删除"><span class="nav-number">5.1.4.</span> <span class="nav-text">五、二叉树的建立与删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#六、二叉树计算深度与层次遍历"><span class="nav-number">5.1.5.</span> <span class="nav-text">六、二叉树计算深度与层次遍历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#七、树的双亲表示法-并查集模板"><span class="nav-number">5.1.6.</span> <span class="nav-text">七、树的双亲表示法( 并查集模板)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、树的操作"><span class="nav-number">5.2.</span> <span class="nav-text">二、树的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、数的最大深度及其个数-普通树的孩子表示法"><span class="nav-number">5.2.1.</span> <span class="nav-text">1、数的最大深度及其个数(  普通树的孩子表示法  )</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、先序中序求后序"><span class="nav-number">5.2.2.</span> <span class="nav-text">2、先序中序求后序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、中序后序求先序"><span class="nav-number">5.2.3.</span> <span class="nav-text">3、中序后序求先序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、后序中序建树"><span class="nav-number">5.2.4.</span> <span class="nav-text">4、后序中序建树</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、二叉排序树"><span class="nav-number">5.3.</span> <span class="nav-text">三、二叉排序树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、给定数字-排成完全二叉排序树"><span class="nav-number">5.3.1.</span> <span class="nav-text">1、给定数字 排成完全二叉排序树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、给定树型-排成二叉排序树"><span class="nav-number">5.3.2.</span> <span class="nav-text">2、给定树型 排成二叉排序树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、按给定序列一次插入构建二叉排序树"><span class="nav-number">5.3.3.</span> <span class="nav-text">3、按给定序列一次插入构建二叉排序树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四、哈夫曼树"><span class="nav-number">5.3.4.</span> <span class="nav-text">四、哈夫曼树</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板六-图模板"><span class="nav-number">6.</span> <span class="nav-text">模板六 图模板</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、图的存储"><span class="nav-number">6.1.</span> <span class="nav-text">一、图的存储</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、弗洛伊德算法"><span class="nav-number">6.2.</span> <span class="nav-text">二、弗洛伊德算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、Dijkstra算法-堆优化"><span class="nav-number">6.3.</span> <span class="nav-text">三、Dijkstra算法(  堆优化 )</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、经过若干中间节点的最短路径"><span class="nav-number">6.4.</span> <span class="nav-text">四、经过若干中间节点的最短路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、多条最短路径最优算法（-PAT实战-P369-）"><span class="nav-number">6.5.</span> <span class="nav-text">五、多条最短路径最优算法（ PAT实战 P369 ）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六、无环图找根使树高最大"><span class="nav-number">6.6.</span> <span class="nav-text">六、无环图找根使树高最大</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#八、DFS同时遍历点集和边集-PAT实战-P350"><span class="nav-number">6.7.</span> <span class="nav-text">八、DFS同时遍历点集和边集( PAT实战 P350 )</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#九、边权最小-点权最大-PAT实战360"><span class="nav-number">6.8.</span> <span class="nav-text">九、边权最小 点权最大(  PAT实战360 )</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板七-搜索"><span class="nav-number">7.</span> <span class="nav-text">模板七 搜索</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、DFS求连通块"><span class="nav-number">7.1.</span> <span class="nav-text">一、DFS求连通块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、并查集-PAT-P334"><span class="nav-number">7.2.</span> <span class="nav-text">二、并查集(PAT P334)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板八-矩阵问题"><span class="nav-number">8.</span> <span class="nav-text">模板八 矩阵问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板九-DP"><span class="nav-number">9.</span> <span class="nav-text">模板九 DP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、最长连续子序列"><span class="nav-number">9.1.</span> <span class="nav-text">一、最长连续子序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、最长连续不下降子序列-LIS"><span class="nav-number">9.2.</span> <span class="nav-text">二、最长连续不下降子序列( LIS )</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、最长公共子序列"><span class="nav-number">9.3.</span> <span class="nav-text">三、最长公共子序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、最大回文串"><span class="nav-number">9.4.</span> <span class="nav-text">四、最大回文串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、背包"><span class="nav-number">9.5.</span> <span class="nav-text">五、背包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板十-STL"><span class="nav-number">10.</span> <span class="nav-text">模板十 STL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、vector"><span class="nav-number">10.1.</span> <span class="nav-text">一、vector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、string"><span class="nav-number">10.2.</span> <span class="nav-text">二、string</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、set"><span class="nav-number">10.3.</span> <span class="nav-text">三、set</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、queue"><span class="nav-number">10.4.</span> <span class="nav-text">四、queue</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、algorithm"><span class="nav-number">10.5.</span> <span class="nav-text">五、algorithm</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板十一-其它算法"><span class="nav-number">11.</span> <span class="nav-text">模板十一 其它算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、递归"><span class="nav-number">11.1.</span> <span class="nav-text">一、递归</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、枚举"><span class="nav-number">11.2.</span> <span class="nav-text">三、枚举</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、其他问题"><span class="nav-number">11.3.</span> <span class="nav-text">四、其他问题</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -774,6 +899,13 @@
       <!--/noindex-->
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -825,11 +957,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
@@ -926,6 +1053,326 @@
 
 
   
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
 
 
 
