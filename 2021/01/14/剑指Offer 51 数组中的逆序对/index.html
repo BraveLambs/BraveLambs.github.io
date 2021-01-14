@@ -96,13 +96,20 @@
 
 
 
-  <meta property="og:type" content="website">
+  <meta name="description" content="Hard |  剑指 Offer 51. 数组中的逆序对 | 归并排序在数组中的两个数字，如果前面一个数字大于后面的数字，则这两个数字组成一个逆序对。输入一个数组，求出这个数组中的逆序对的总数。 示例 1: 12输入: [7,5,6,4]输出: 5 这道Hard题是很难想的。方法很巧妙, 我是看了题解看了好长时间才弄懂。 这道题的核心思想是 递归的把数据分成两半, 先计算左半边的逆序对, 再计算右">
+<meta property="og:type" content="article">
 <meta property="og:title" content="BraveLambs">
-<meta property="og:url" content="https://bravelambs.github.io/tags/机试/index.html">
+<meta property="og:url" content="https://bravelambs.github.io/2021/01/14/剑指Offer 51 数组中的逆序对/index.html">
 <meta property="og:site_name" content="BraveLambs">
+<meta property="og:description" content="Hard |  剑指 Offer 51. 数组中的逆序对 | 归并排序在数组中的两个数字，如果前面一个数字大于后面的数字，则这两个数字组成一个逆序对。输入一个数组，求出这个数组中的逆序对的总数。 示例 1: 12输入: [7,5,6,4]输出: 5 这道Hard题是很难想的。方法很巧妙, 我是看了题解看了好长时间才弄懂。 这道题的核心思想是 递归的把数据分成两半, 先计算左半边的逆序对, 再计算右">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://bravelambs.github.io/2021/01/14/剑指Offer%2051%20数组中的逆序对/image-20210114163508672.png">
+<meta property="og:image" content="https://bravelambs.github.io/2021/01/14/剑指Offer%2051%20数组中的逆序对/image-20210114163124718.png">
+<meta property="og:updated_time" content="2021-01-14T09:09:20.395Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BraveLambs">
+<meta name="twitter:description" content="Hard |  剑指 Offer 51. 数组中的逆序对 | 归并排序在数组中的两个数字，如果前面一个数字大于后面的数字，则这两个数字组成一个逆序对。输入一个数组，求出这个数组中的逆序对的总数。 示例 1: 12输入: [7,5,6,4]输出: 5 这道Hard题是很难想的。方法很巧妙, 我是看了题解看了好长时间才弄懂。 这道题的核心思想是 递归的把数据分成两半, 先计算左半边的逆序对, 再计算右">
+<meta name="twitter:image" content="https://bravelambs.github.io/2021/01/14/剑指Offer%2051%20数组中的逆序对/image-20210114163508672.png">
 
 
 
@@ -110,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="https://bravelambs.github.io/tags/机试/">
+  <link rel="canonical" href="https://bravelambs.github.io/2021/01/14/剑指Offer 51 数组中的逆序对/">
 
 
 
@@ -120,7 +127,7 @@
   };
 </script>
 
-  <title>标签: 机试 | BraveLambs</title>
+  <title> | BraveLambs</title>
   
 
 
@@ -168,7 +175,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -301,74 +308,236 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>机试<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://bravelambs.github.io/2021/01/14/剑指Offer 51 数组中的逆序对/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Braveshine">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BraveLambs">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/04/03/北邮机试模板/" itemprop="url">
-            
-              <span itemprop="name">北邮机试模板</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-03T11:01:16+08:00" content="2019-04-03">
-          04-03
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2021-01-14 17:09:59 / 修改时间：17:09:20" itemprop="dateCreated datePublished" datetime="2021-01-14T17:09:59+08:00">2021-01-14</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Hard-剑指-Offer-51-数组中的逆序对-归并排序"><a href="#Hard-剑指-Offer-51-数组中的逆序对-归并排序" class="headerlink" title="Hard |  剑指 Offer 51. 数组中的逆序对 | 归并排序"></a>Hard |  <a href="https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/" target="_blank" rel="noopener">剑指 Offer 51. 数组中的逆序对</a> | 归并排序</h2><p>在数组中的两个数字，如果前面一个数字大于后面的数字，则这两个数字组成一个逆序对。输入一个数组，求出这个数组中的逆序对的总数。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [7,5,6,4]</span><br><span class="line">输出: 5</span><br></pre></td></tr></table></figure>
+<p>这道Hard题是很难想的。方法很巧妙, 我是看了题解看了好长时间才弄懂。</p>
+<p>这道题的核心思想是</p>
+<p><strong>递归的把数据分成两半, 先计算左半边的逆序对, 再计算右半边的逆序对, 然后计算跨越左半边和右半边的逆序对。</strong></p>
+<p><strong>计算逆序对的办法是归并排序。边排序, 边计算。并且在计算跨左右两边的逆序对 , 并且归并排序的同时, 有一个重要的前提是左右两边的逆序对已经计算完成了,并且已经是升序的。</strong></p>
+<p>下图1是递归分治的过程, 简单来说就是递归的归并排序算法</p>
+<p><img src="image-20210114163508672.png" alt="image-20210114163508672"></p>
+<p>图2是归并排序并且计算逆序对的过程。首先是2和1比, 因为1小于2, 所以把1放入原始数据(代表已排好序)。由于(由于此时2和1构成逆序对)。根据归并的两个数组有序的特点, 一下了就可以得出, 在左边的数组当中, 与右边1构成逆序对的数是4。把这个过程画一画, 就能感受到时间的优化在哪里了。<br><img src="image-20210114163124718.png" alt="image-20210114163124718"></p>
+<p>总的时间复杂度为：O(nlogn）; 空间复杂度为O(n)</p>
+<p>代码如下</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reversePairs</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len = nums.length;</span><br><span class="line">		<span class="comment">// 如果没有数或者只有1个数字, 直接返回0</span></span><br><span class="line">        <span class="keyword">if</span> (len &lt; <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// copy 只是为了防止原数组被修改, 所以拷贝一个副本</span></span><br><span class="line">        <span class="keyword">int</span>[] copy = Arrays.copyOf(nums, len);</span><br><span class="line">        <span class="comment">// temp 是归并排序的辅助数组</span></span><br><span class="line">        <span class="keyword">int</span>[] temp = <span class="keyword">new</span> <span class="keyword">int</span>[len];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> reversePairs(copy, <span class="number">0</span>, len-<span class="number">1</span>, temp);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 计算 [left, right] 的逆序对个数并且排序</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reversePairs</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> left, <span class="keyword">int</span> right, <span class="keyword">int</span>[] temp)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (left == right) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> mid = left + ((right - left) &gt;&gt; <span class="number">1</span>);</span><br><span class="line">        <span class="comment">// 递归左半边归并排序, 并且计算左半边的逆序对</span></span><br><span class="line">        <span class="keyword">int</span> leftPairs = reversePairs(nums, left, mid, temp);</span><br><span class="line">        <span class="comment">// 递归右半边归并排序, 并且计算右半边的逆序对</span></span><br><span class="line">        <span class="keyword">int</span> rightPairs = reversePairs(nums, mid + <span class="number">1</span>, right, temp);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 优化 : 两边已经排好序时, 并且整个数组都已经有序时, 就不用再继续进行归并了</span></span><br><span class="line">        <span class="keyword">if</span> (nums[mid] &lt;= nums[mid+<span class="number">1</span>]) &#123;</span><br><span class="line">            <span class="keyword">return</span> leftPairs + rightPairs;</span><br><span class="line">        &#125;</span><br><span class="line">		<span class="comment">// 归并左右的两个半边的数组, 并计算跨这个半边的逆序对的个数</span></span><br><span class="line">        <span class="keyword">int</span> crossPairs = mergeAndCount(nums, left, mid , right, temp);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 逆序对总数是左半边逆序对的个数 + 右半边逆序对个数 + 跨越两个半边的逆序对总和。</span></span><br><span class="line">        <span class="keyword">return</span> leftPairs + rightPairs + crossPairs;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 归并排序的具体过程</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">mergeAndCount</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> left, <span class="keyword">int</span> mid, <span class="keyword">int</span> right, <span class="keyword">int</span>[] temp)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// temp 是对 [left, mid] [mid + 1, right] 两个有序数组进行归并排序的辅助数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = left; i &lt;= right; i++) &#123;</span><br><span class="line">            temp[i] = nums[i];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> i = left, j = mid + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> k = left; k &lt;= right; k++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i == mid + <span class="number">1</span>) &#123;</span><br><span class="line">                <span class="comment">// 左边已经全部归并完成</span></span><br><span class="line">                nums[k] = temp[j++];</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (j == right + <span class="number">1</span>) &#123;</span><br><span class="line">                <span class="comment">// 右边全部归并完成</span></span><br><span class="line">                nums[k] = temp[i++];</span><br><span class="line">            &#125; </span><br><span class="line">            <span class="comment">// 这里只有&lt;= 归并排序才是一个稳定的排序</span></span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (temp[i] &lt;= temp[j]) &#123;</span><br><span class="line">                nums[k] = temp[i++];</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                nums[k] = temp[j++];</span><br><span class="line">                <span class="comment">// 逆序对是左边还没有归并的数</span></span><br><span class="line">                count += (mid - i + <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+              <div>
+                
+
+<script src="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.css">
+
+
+  
+
+
+<div class="likely">
+	
+ 	 	<div class="twitter">Tweet</div>
+	
+ 	 	<div class="facebook">Share</div>
+	
+ 	 	<div class="linkedin">Link</div>
+	
+ 	 	<div class="gplus">Plus</div>
+	
+ 	 	<div class="vkontakte">Share</div>
+	
+ 	 	<div class="odnoklassniki">Class</div>
+	
+ 	 	<div class="telegram">Send</div>
+	
+ 	 	<div class="whatsapp">Send</div>
+	
+ 	 	<div class="pinterest">Pin</div>
+	
+</div>
+
+              </div>
+            
+            
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/03/北邮机试模板/" rel="next" title="北邮机试模板">
+                <i class="fa fa-chevron-left"></i> 北邮机试模板
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -388,8 +557,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -505,6 +683,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hard-剑指-Offer-51-数组中的逆序对-归并排序"><span class="nav-number">1.</span> <span class="nav-text">Hard |  剑指 Offer 51. 数组中的逆序对 | 归并排序</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -637,6 +832,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
 
   
 
@@ -652,6 +851,8 @@
 
   
 
+
+  
 
 
   
